@@ -1,7 +1,5 @@
-import React from 'react';
+type GenerateId = () => string;
 
-export const App: React.FC = () => {
-    return (
-        <div>123999+9</div>
-    );
-}
+export const generateId: GenerateId = () => (
+    Math.random().toString(16).slice(2) + new Date().getTime().toString(36)
+);
