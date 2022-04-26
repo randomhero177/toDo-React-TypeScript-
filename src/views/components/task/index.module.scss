@@ -1,0 +1,14 @@
+.inputPlus {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 45px;
+    &Value {
+        border: 1px solid #B1B1B1;
+        padding: 10px;
+        font: 1rem/1.4 'Roboto', sans-serif;
+    }
+    &Button {
+        border: none;
+        background: #3F72FA url('./images/plus.svg') no-repeat center center;
+    }
+}

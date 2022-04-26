@@ -3,6 +3,7 @@ import React, {useEffect} from 'react';
 
 import { useToDoStore } from '../../data/store/useToDoStore';
 import { InputPlus } from '../components/input';
+import { Task } from '../components/task';
 
 import styles from './index.module.scss';
 
@@ -20,10 +21,11 @@ export const App: React.FC = () => {
         state.removeTask,
     ]);
 
+    /*
     useEffect(() => {
         createTask('set teask');
     }, [])
-
+    */
     console.log(tasks);
 
     return (
@@ -39,6 +41,20 @@ export const App: React.FC = () => {
                   }}
               />
           </div>
+          <section className={styles.articleText}>
+              {!tasks.length && (
+                  <p>There is no tasks</p>
+              )}
+              {tasks.map(task => (
+                  <Task
+                      id={task.id}
+                      title={task.title}
+                      onDone={() => {}}
+                      onEdit={() => {}}
+                      onDelete={() => {}}
+                  />
+              ))}
+          </section>
       </article>
     )
 }
