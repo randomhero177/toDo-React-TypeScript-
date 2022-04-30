@@ -47,11 +47,12 @@ export const App: React.FC = () => {
               )}
               {tasks.map(task => (
                   <Task
+                      key={task.id}
                       id={task.id}
                       title={task.title}
-                      onDone={() => {}}
-                      onEdit={() => {}}
-                      onDelete={() => {}}
+                      onDone={removeTask}
+                      onEdit={updateTask}
+                      onDelete={removeTask}
                   />
               ))}
           </section>

@@ -1,14 +1,41 @@
-.inputPlus {
+.task {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 45px;
-    &Value {
-        border: 1px solid #B1B1B1;
-        padding: 10px;
-        font: 1rem/1.4 'Roboto', sans-serif;
+    grid-template-columns: 1fr 50px 50px;
+    margin-bottom: 15px;
+    background: #DBE2EF;
+    &Label {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding: 15px;
+        align-items: center;
+        cursor: pointer;
     }
-    &Button {
+    &Title {
+        text-align: left;
+        line-height: 1.2;
+        color: #000;
+        padding: 0 12px;
+    }
+    &Checkbox {
+        width: 20px;
+        height: 20px;
+    }
+    &Edit, &Remove {
+        display: block;
         border: none;
-        background: #3F72FA url('./images/plus.svg') no-repeat center center;
+        background: none no-repeat center center;
+        cursor: pointer;
+        transition: opacify 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &Edit {
+        background-image: url('./images/edit.svg');
+    }
+    &Remove {
+        background-image: url('./images/trash.svg');
     }
 }
