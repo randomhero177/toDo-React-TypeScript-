@@ -1,7 +1,7 @@
 .task {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 50px 50px;
+    grid-template-columns: 1fr 50px 70px;
     margin-bottom: 15px;
     background: #DBE2EF;
     &Label {
@@ -21,7 +21,7 @@
         width: 20px;
         height: 20px;
     }
-    &Edit, &Remove {
+    &Edit, &Remove, &Save, &Cancel {
         display: block;
         border: none;
         background: none no-repeat center center;
@@ -37,5 +37,31 @@
     }
     &Remove {
         background-image: url('./images/trash.svg');
+    }
+    &Save {
+        background-image: url('./images/check.svg');
+        width: 20px;
+        height: 20px;
+    }
+    &Cancel {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw4M9Q3eXT-H8LjE_Dxp4aQjqiyoaQ62tYCw&usqp=CAU');
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        margin-right: 15px;
+    }
+    &Flex {
+        display: flex;
+        align-items: center;
+    }
+    &InputEdit {
+        font: 1rem/1em 'Roboto', sans-serif;
+        border: none;
+        padding: 5px;
+        box-shadow: 0 4px 0 -3px #3f72af1f;
+        &:focus-visible  {
+          border: 0;
+          outline: 1px solid rgb(63 114 175 / 41%);
+        }
     }
 }
